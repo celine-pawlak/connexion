@@ -4,29 +4,30 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="connexion.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
 
     </header>
     <main>
+      <span class="login">Login</span>
       <form class="connexion" action="form.php" method="post">
         <div class="champ">
-          <label for="pseudo">Entrez un pseudonyme :</label>
-          <input type="text" id="pseudo" name="pseudo" value="">
+          <label for="username"></label>
+          <input type="text" id="username" name="username" value="" placeholder="Username" required>
         </div>
         <div class="champ">
-          <label for="pass">Entrez un mot de passe :</label>
-          <input type="password" id="pass" name="pass" value="">
+          <label for="pass"></label>
+          <input type="password" id="pass" name="pass" value="" placeholder="Password" required>
         </div>
         <div class="champ">
-          <label for="mail">Entrez un mail :</label>
-          <input type="email"  id="mail" name="mail" value="">
-        </div>
-        <div class="champ">
-          <input type="submit" name="" value="Envoyer">
+          <button type="submit" name="button">CONTINUE</button>
         </div>
       </form>
+      <span class="forgotpass">Did you forget your <a href="motdepasse.html">password</a> ?</span>
     </main>
     <footer>
 
