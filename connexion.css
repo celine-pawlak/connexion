@@ -10,54 +10,107 @@ body{
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-family: 'Baloo Chettan 2', cursive;
-  font-size:20px;
-  -webkit-appearance:none;
+  justify-content: center;
 }
 main{
+  font-family: 'Baloo Chettan 2', cursive;
+  font-size:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.login, .signup{
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 0px 40px black;
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;
-  align-items: center;
-  width: 40rem;
-  height: 40rem;
+  min-height: 70%;
 }
 .login{
+  min-width: 30%;
+}
+.signup{
+  min-width: 60%;
+}
+.title{
   color:#72620D;
   font-size: 60px;
   font-family: 'Indie Flower', cursive;
+  flex-grow: 1;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+form.connexion, form.inscription{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  width: 100%;
   flex-grow: 1;
 }
-form{
-  display: flex;
-  flex-direction: column;
+form.connexion{
   justify-content:space-evenly;
   align-items: center;
-  width: 50%;
-  flex-grow: 1;
-  max-height: 30%;
 }
 .champ{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-.champ, button{
-  height:3rem;
+.champ input, .champ button{
+  width:50%;
 }
-.champ, button, input{
-  width:100%;
-  -webkit-appearance: none;
-  font-family : inherit;
+.champ-inscription{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: flex-start;
+  margin: 1rem;
 }
-.champ>input{
+.ligne-selection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+}
+.signuplign>label, .signuplign>input, .signuplignhobbies>label, .signuplignhobbies>input{
+  flex-grow: 1;
+}
+.champs-incription{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 5;
+}
+.champs-inscription-basic{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-right: 1px solid #72620D;
+}
+.champs-inscription-données-personnelles{
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.champs-inscription-données-personnelles-PART{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+input[type=text], input[type=email], input[type=password], input[type=tel]{
   border: 2px solid #72620D;
   height:2rem;
   border-top: none;
@@ -66,6 +119,7 @@ form{
   background: none;
   border-radius: 20px;
   box-shadow: -5px 5px 10px #72620D;
+  -webkit-appearance:none;
 }
 input,textarea{
   padding-left: 1rem;
@@ -74,34 +128,63 @@ input,textarea{
 }
 ::placeholder{
   color: #72620D;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: 'Baloo Chettan 2', cursive;
 }
-input:hover {
+input[type=text]:hover, input[type=email]:hover, input[type=password]:hover, input[type=tel]:hover {
   background:rgba(255, 255, 255, 0.7);
 }
-
 button[type=submit]{
   background:rgba(204, 60, 129, 0.6);
   color:white;
   border-radius: 10px;
+  box-shadow: 0 0 5px white;
+  height:3rem;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
 }
 button[type=submit]:hover{
   background:rgba(204, 60, 129, 1);
+  box-shadow: 0 0 10px white;
 }
-.forgotpass{
+.redirections{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   flex-grow: 1;
   font-style: italic;
+  width:100%;
+}
+.redirection{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 a{
   text-decoration: none;
   color: inherit;
-}
-.forgotpass>a{
+  padding-left: 3px;
   color: #72620D;
 }
-.forgotpass>a:hover{
+a:hover{
   font-weight: bold;
 }
 textarea, input, button:focus{
   outline: none;
+}
+
+
+
+
+input:invalid+span:after {
+  content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  content: '✓';
+  padding-left: 5px;
 }

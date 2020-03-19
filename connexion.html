@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="connexion.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
@@ -13,21 +13,26 @@
 
     </header>
     <main>
-      <span class="login">Login</span>
-      <form class="connexion" action="form.php" method="post">
-        <div class="champ">
-          <label for="username"></label>
-          <input type="text" id="username" name="username" value="" placeholder="Username" required>
+      <div class="login">
+        <span class="title">Se connecter</span>
+        <form class="connexion" action="form.php" method="post">
+          <div class="champ">
+            <label for="username"></label>
+            <input type="text" id="username" name="username" value="" placeholder="Pseudonyme" required>
+          </div>
+          <div class="champ">
+            <label for="pass"></label>
+            <input type="password" id="pass" name="pass" value="" placeholder="Mot de passe" required>
+          </div>
+          <div class="champ">
+            <button type="submit">CONTINUER</button>
+          </div>
+        </form>
+        <div class="redirections">
+          <span class="redirection">Avez-vous oublié votre<a href="motdepasse.html">mot de passe</a> ?</span>
+          <span class="redirection">Vous n'avez pas de compte ?<a href="inscription.html">Créer un compte</a></span>
         </div>
-        <div class="champ">
-          <label for="pass"></label>
-          <input type="password" id="pass" name="pass" value="" placeholder="Password" required>
-        </div>
-        <div class="champ">
-          <button type="submit" name="button">CONTINUE</button>
-        </div>
-      </form>
-      <span class="forgotpass">Did you forget your <a href="motdepasse.html">password</a> ?</span>
+      </div>
     </main>
     <footer>
 

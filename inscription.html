@@ -2,14 +2,135 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Création compte</title>
+    <link rel="stylesheet" href="connexion.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
 
     </header>
     <main>
-      
+      <div class="signup">
+        <span class="title">Créer un compte</span>
+        <form class="inscription" action="form.php" method="post">
+          <div class="champs-incription">
+            <div class="champs-inscription-basic">
+              <div class="champ-inscription">
+                <label for="email">Email <em>*</em></label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+              </div>
+              <div class="champ-inscription">
+                <label for="username">Pseudonyme <em>*</em></label>
+                <input type="text" id="username" name="username" placeholder="Créez votre pseudonyme" required>
+              </div>
+              <div class="champ-inscription">
+                <label for="pass">Mot de passe <em>*</em></label>
+                <input type="password" id="pass" name="pass" placeholder="Créez votre mot de passe" required>
+              </div>
+              <div class="champ-inscription">
+                <label for="passconfirm">Mot de passe <em>*</em></label>
+                <input type="password" id="passconfirm" name="pass" placeholder="Confirmez votre mot de passe" required>
+              </div>
+            </div>
+            <div class="champs-inscription-données-personnelles">
+              <div class="champs-inscription-données-personnelles-PART">
+                <div class="champ-inscription">
+                  <label for="lastname">Nom</label>
+                  <input type="text" id="lastname" name="lastname" placeholder="Entrez votre nom">
+                </div>
+                <div class="champ-inscription">
+                  <label for="firstname">Prénom</label>
+                  <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prénom">
+                </div>
+                <div class="champ-inscription">
+                  <label for="birthday">Date de naissance</label>
+                  <input type="date" id="birthday" name="birthday">
+                  <span class="validity"></span>
+                </div>
+              </div>
+              <div class="champs-inscription-données-personnelles-PART">
+                <div class="champ-inscription">
+                  <fieldset>
+                    <legend>Genre</legend>
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Female</label>
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Male</label>
+                  </fieldset>
+                </div>
+                <div class="champ-inscription">
+                  <label for="telephone">Téléphone</label>
+                  <input type="tel" id="telephone" name="telephone">
+                </div>
+                <div class="champ-inscription">
+                  <label for="etudes">Niveau d'étude</label>
+                  <select class="liste-etudes" id="etudes" name="etudes">
+                    <option>Non sélectionné</option>
+                    <option>Pas de diplôme</option>
+                    <option>CAP, BEP</option>
+                    <option>Baccalauréat</option>
+                    <option>Bac+2: DEUG, BTS, DUT, DEUST</option>
+                    <option>Bac+3: Licence, licence professionnelle</option>
+                    <option>Bac+4: Maîtrise, master 1</option>
+                    <option>Bac+5: Master, diplôme d'ingénieur</option>
+                    <option>Bac+8: Doctorat</option>
+                  </select>
+                </div>
+              </div>
+              <div class="champs-inscription-données-personnelles-PART">
+                <fieldset>
+                  <legend>Hobbies</legend>
+                  <div class="hobbies">
+                    <input id="sports" type="checkbox" name="hobbie1" value="sports">
+                    <label for="sports">Sports</label>
+                  </div>
+                  <div class="hobbies">
+                    <input id="loisirs-creatifs" type="checkbox" name="hobbie1" value="loisirs-creatifs">
+                    <label for="loisirs-creatifs">Loisirs créatifs</label>
+                  </div>
+                  <div class="hobbies">
+                    <input id="musique" type="checkbox" name="hobbie1" value="musique">
+                    <label for="musique">Musique</label>
+                  </div>
+                  <div class="hobbies">
+                    <input id="cuisine" type="checkbox" name="hobbie1" value="cuisine">
+                    <label for="cuisine">Cuisine</label>
+                  </div>
+                  <div class="hobbies">
+                    <input id="activites-manuelles" type="checkbox" name="hobbie1" value="activites-manuelles">
+                    <label for="activites-manuelles">Activités manuelles</label>
+                  </div>
+                  <div class="hobbies">
+                    <input id="ecriture" type="checkbox" name="hobbie1" value="ecriture">
+                    <label for="ecriture">Ecriture</label>
+                  </div>
+                  <div class="hobbies">
+                    <input id="lecture" type="checkbox" name="hobbie1" value="lecture">
+                    <label for="lecture">Lecture</label>
+                  </div>
+                  <div class="hobbies">
+                    <input for="hobbieautre" type="checkbox" name="hobbieautre" >
+                    <input id="hobbieautre" type="text" name="hobbieautre" placeholder="Autres...">
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Présentation</legend>
+                  <input type="text" id="presentation" name="presentation" placeholder="Présentez-vous en quelques lignes">
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="champ">
+            <button type="submit">CREER COMPTE</button>
+          </div>
+        </form>
+        <div class="redirections">
+          <span class="redirection">Already have an account ? <a href="connexion.html">Log in</a></span>
+        </div>
+      </div>
     </main>
     <footer>
 
