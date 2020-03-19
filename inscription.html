@@ -15,20 +15,20 @@
     <main>
       <div class="signup">
         <span class="title">Créer un compte</span>
-        <form class="inscription" action="form.php" method="post">
+        <form class="inscription" action="connexion.html" method="post">
           <div class="champs-incription">
             <div class="champs-inscription-basic">
               <div class="champ-inscription">
                 <label for="email">Email <em>*</em></label>
-                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
               </div>
               <div class="champ-inscription">
                 <label for="username">Pseudonyme <em>*</em></label>
-                <input type="text" id="username" name="username" placeholder="Créez votre pseudonyme" required>
+                <input type="text" id="username" name="username" placeholder="Créez votre pseudonyme" required pattern="(.{6,}" title="Doit contenir au moins 6 caractères">
               </div>
               <div class="champ-inscription">
                 <label for="pass">Mot de passe <em>*</em></label>
-                <input type="password" id="pass" name="pass" placeholder="Créez votre mot de passe" required>
+                <input type="password" id="pass" name="pass" placeholder="Créez votre mot de passe" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Doit contenir au moins 8 caractères, 1 lettre majuscule, 1 lettre minuscule et 1 chiffre">
               </div>
               <div class="champ-inscription">
                 <label for="passconfirm">Mot de passe <em>*</em></label>
@@ -39,16 +39,15 @@
               <div class="champs-inscription-données-personnelles-PART">
                 <div class="champ-inscription">
                   <label for="lastname">Nom</label>
-                  <input type="text" id="lastname" name="lastname" placeholder="Entrez votre nom">
+                  <input type="text" id="lastname" name="lastname" placeholder="Entrez votre nom" pattern="[a-zA-ZÀ-ÿ]|[-]">
                 </div>
                 <div class="champ-inscription">
                   <label for="firstname">Prénom</label>
-                  <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prénom">
+                  <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prénom" pattern="[a-zA-ZÀ-ÿ]|[-]">
                 </div>
                 <div class="champ-inscription">
                   <label for="birthday">Date de naissance</label>
                   <input type="date" id="birthday" name="birthday">
-                  <span class="validity"></span>
                 </div>
               </div>
               <div class="champs-inscription-données-personnelles-PART">
@@ -61,7 +60,7 @@
                   </fieldset>
                 <div class="champ-inscription">
                   <label for="telephone">Téléphone</label>
-                  <input type="tel" id="telephone" name="telephone">
+                  <input type="tel" id="telephone" name="telephone" placeholder="Numéro de téléphone">
                 </div>
                 <div class="champ-inscription">
                   <label for="etudes">Niveau d'étude <em>*</em></label>
@@ -123,11 +122,11 @@
             </div>
           </div>
           <div class="champ">
-            <button type="submit">CREER COMPTE</button>
+            <button href="connexion.html" type="submit">CREER COMPTE</button>
           </div>
         </form>
         <div class="redirections">
-          <span class="redirection">Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></span>
+          <span class="redirection">Vous êtes déjà membre ? <a href="connexion.html">Connectez vous</a></span>
         </div>
         <span id="astérisque">* : Ces champs sont obligatoires</span>
       </div>
