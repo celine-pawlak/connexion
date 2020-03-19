@@ -24,7 +24,7 @@
               </div>
               <div class="champ-inscription">
                 <label for="username">Pseudonyme <em>*</em></label>
-                <input type="text" id="username" name="username" placeholder="Créez votre pseudonyme" required pattern="(.{6,}" title="Doit contenir au moins 6 caractères">
+                <input type="text" id="username" name="username" placeholder="Créez votre pseudonyme" required pattern=".{6,}" title="Doit contenir au moins 6 caractères">
               </div>
               <div class="champ-inscription">
                 <label for="pass">Mot de passe <em>*</em></label>
@@ -39,11 +39,11 @@
               <div class="champs-inscription-données-personnelles-PART">
                 <div class="champ-inscription">
                   <label for="lastname">Nom</label>
-                  <input type="text" id="lastname" name="lastname" placeholder="Entrez votre nom" pattern="[a-zA-ZÀ-ÿ]|[-]">
+                  <input type="text" id="lastname" name="lastname" placeholder="Entrez votre nom" pattern="[a-zA-ZÀ-ÿ]+" required>
                 </div>
                 <div class="champ-inscription">
                   <label for="firstname">Prénom</label>
-                  <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prénom" pattern="[a-zA-ZÀ-ÿ]|[-]">
+                  <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prénom" pattern="[a-zA-ZÀ-ÿ]+">
                 </div>
                 <div class="champ-inscription">
                   <label for="birthday">Date de naissance</label>
