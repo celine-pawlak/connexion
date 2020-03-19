@@ -52,31 +52,29 @@
                 </div>
               </div>
               <div class="champs-inscription-données-personnelles-PART">
-                <div class="champ-inscription">
-                  <fieldset>
-                    <legend>Genre</legend>
-                    <input type="radio" id="female" name="gender">
-                    <label for="female">Female</label>
+                  <fieldset required>
+                    <legend>Genre <em>*</em></legend>
+                    <input type="radio" id="female" name="gender" required>
+                    <label for="female">Femme</label>
                     <input type="radio" id="male" name="gender">
-                    <label for="male">Male</label>
+                    <label for="male">Homme</label>
                   </fieldset>
-                </div>
                 <div class="champ-inscription">
                   <label for="telephone">Téléphone</label>
                   <input type="tel" id="telephone" name="telephone">
                 </div>
                 <div class="champ-inscription">
-                  <label for="etudes">Niveau d'étude</label>
-                  <select class="liste-etudes" id="etudes" name="etudes">
-                    <option>Non sélectionné</option>
-                    <option>Pas de diplôme</option>
-                    <option>CAP, BEP</option>
-                    <option>Baccalauréat</option>
-                    <option>Bac+2: DEUG, BTS, DUT, DEUST</option>
-                    <option>Bac+3: Licence, licence professionnelle</option>
-                    <option>Bac+4: Maîtrise, master 1</option>
-                    <option>Bac+5: Master, diplôme d'ingénieur</option>
-                    <option>Bac+8: Doctorat</option>
+                  <label for="etudes">Niveau d'étude <em>*</em></label>
+                  <select class="liste-etudes" id="etudes" name="etudes" required>
+                    <option value="">Sélectionnez un niveau</option>
+                    <option value="-">Pas de diplôme</option>
+                    <option value="niveau 3">CAP, BEP</option>
+                    <option value="niveau 4">Baccalauréat</option>
+                    <option value="niveau 5">Bac+2: DEUG, BTS, DUT, DEUST</option>
+                    <option value="niveau 6">Bac+3: Licence, licence professionnelle</option>
+                    <option value="niveau 6">Bac+4: Maîtrise, master 1</option>
+                    <option value="niveau 7">Bac+5: Master, diplôme d'ingénieur</option>
+                    <option value="niveau 8">Bac+8: Doctorat</option>
                   </select>
                 </div>
               </div>
@@ -118,7 +116,8 @@
                 </fieldset>
                 <fieldset>
                   <legend>Présentation</legend>
-                  <input type="text" id="presentation" name="presentation" placeholder="Présentez-vous en quelques lignes">
+                  <label for="presentation"></label>
+                  <textarea id="presentation" name="presentation" placeholder="Présentez-vous en quelques lignes..." rows="15" cols="50" maxlength="1000"></textarea>
                 </fieldset>
               </div>
             </div>
@@ -128,8 +127,9 @@
           </div>
         </form>
         <div class="redirections">
-          <span class="redirection">Already have an account ? <a href="connexion.html">Log in</a></span>
+          <span class="redirection">Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></span>
         </div>
+        <span id="astérisque">* : Ces champs sont obligatoires</span>
       </div>
     </main>
     <footer>
